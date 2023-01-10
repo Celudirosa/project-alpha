@@ -4,23 +4,79 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/lightmode.css">
-  <link rel="stylesheet" href="css/darkmode.css" id="style-dark-model">
+  <link rel="stylesheet" href="css/light-mode.css">
+  <link rel="stylesheet" href="css/dark-mode.css" id="style-dark-model">
 
   <title>Celia</title>
 </head>
-<body>
-  <div id="content-language-es">
-    <h1>¡Hola!</h1>
-    <p>Este es el contenido de mi página web en español.</p>
+<body class="background">
+  <div class="background-window" id="content-language-es">
+    <section>
+      <div>
+        <h1>¡Hola!</h1>
+        <p>soy Celia Luque Díaz (aka Celudirosa en RRSS)... ¡¡diseñadora y desarrolladora web!!</p>
+      </div>
+    </section>
+    <section>
+      <div>
+        <p>Tengo un perfil híbrido que combina los mundos del diseño y la programación.</p>
+        <p>Soy de Mérida (Extremadura) pero vivo en Valencia desde 2014.</p>
+        <p>Mi curiosidad por el arte, el diseño y las nuievas tecnologías empezó desde muy pequeña, pero cuando comencé el bachillerato artístico rm ña ESAD (Escuela Superior de Arte y Diseño) de Mérida fue cuando comencé a formarme y... ¡no he parado desde entonces!</p>
+        <p>...ni pretendo hacerlo...</p>
+      </div>
+    </section>
+    <section>
+      <div>
+        <h2>Formación</h2>
+        <p>Conservación y Restauración de Bienes Culturales UPV</p>
+        <p>Artes Gráficas UPV</p>
+        <p>y actualmente...</p>
+        <p>Postgrado especializado en UX/UI, marketing digital y desarrollo web front-end en la ESAT</p>
+      </div>
+    </section>
+    <section>
+      <div>
+        <h2>Lenguajes de programación</h2>
+        <h2>Softwares y programas</h2>
+      </div>
+    </section>
+    <section>
+      <div>
+        <ul><h2>Aptitudes</h2>
+          <li>Colaborativa</li>
+          <li>Organizada</li>
+          <li>Creativa</li>
+          <li>Resolutiva</li>
+          <li>Adaptabilidad</li>
+          <li>Formación constante</li>
+        </ul>
+      </div>
+    </section>
+    <section>
+      <h2>¡Escríbeme!</h2>
+      <form action="">
+        <label for="name">Pepito Grillo</label><br>
+        <input type="text" id="name" name="name"><br>
+        <label for="email">pepito@grillo.com</label><br>
+        <input type="text" id="email" name="email"><br>
+        <label for="message">Mensaje...</label><br>
+        <textarea id="message" name="message" rows="10" cols="30"></textarea><br>
+        <input type="submit" value="Enviar">
+      </form>
+    </section>
+    <p>¡Gracias!</p>
   </div>
+
   <div id="content-language-en" style="display:none;">
     <h1>Hello!</h1>
     <p>This is the content of my website in english.</p>
   </div>
   <button id="button-language-es">ES</button>
   <button id="button-language-en">EN</button>
-  <button id="button-dark-mode">Dark Mode</button>
+  <button id="button-dark-mode">Light Mode</button>
   <script src="index.js"></script>
 </body>
+<footer>
+  <div>RRSS</div>
+</footer>
 </html>
