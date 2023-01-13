@@ -1,24 +1,49 @@
 html {
-  background: #A6D4EA;
   font-family: 'Poppins', sans-serif;
   font-size: 13px;
+  display: flex;
 }
 
 body {
   margin: 0;
 }
 
+.background {
+  animation: changeBg 5s infinite alternate linear;
+}
+
+@keyframes changeBg {
+  0% {
+    background: #A6D4EA;
+  }
+  25% {
+    background: #86CAE8;
+  }
+  50% {
+    background: #9AC5DA;
+  }
+  75% {
+    background: #A8BDDB;
+  }
+  100% {
+    background: #A7D3DB;
+  }
+}
+
 /* ***FONT STYLE*** */
+
 h1, h2 {
   margin: 0;
   padding: 0;
 }
 
+.light-text {
+  font-weight: 200;
+}
 
-.background-window {
-  position: absolute;
-  margin: 100px, 30px, 200px, 30px;
+/* ***HEADER*** */
 
+.topbar {
   background: rgba(233, 235, 248, 0.7);
   border-width: 1px 1px 0px 0px;
   border-style: solid;
@@ -26,7 +51,96 @@ h1, h2 {
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(10px);
   border-radius: 15px;
+
+  display: flex;
+  justify-content: space-between;
+
+  position: fixed;
+  top: 25px;
+  left: 15px;
+  z-index: 1;
+  align-items: center;
+
+  width: 333px;
+  height: 36px;
+  left: 30px;
+  top: 58px;
+
+  margin-right: 15px;
+}
+
+/* ***CONTAINERS*** */
+
+/* Style containers */
+.container {
+  background: rgba(233, 235, 248, 0.7);
+  border-width: 1px 1px 0px 0px;
+  border-style: solid;
+  border-color: #FFFFFF;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  margin-top: 40px;
+  flex-direction: row;
+
+}
+
+.container-intro {
+  margin-right: 15px;
+  margin-top: 15px;
+  display: flex;
+  width: 400px;
+  height: 234px;
+}
+
+.container-about {
+  margin-left: 15px;
+  padding: 35px;
+}
+
+.container-formacion {
+  margin-right: 15px;
+  padding: 35px;
 }
 
 
 
+/* ***INTRO*** */
+
+.emoji {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 11px;
+  isolation: isolate;
+
+  width: 231px;
+  height: 220px;
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+
+}
+
+.text-intro {
+  padding-top: 25px;
+  padding-right: 25px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* ***FOOTER*** */
+
+footer {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.img-link {
+  border: none;
+  width: 20px;
+  height: 20px;
+}

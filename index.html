@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="background">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,31 +12,36 @@
   <title>Celia</title>
 </head>
 
-<body class="background">
+<body>
 
   <header>
-    <div>Celia Luque Díaz
-      <button id="button-language-es">ES</button>
-      <button id="button-language-en">EN</button>
-      <button id="button-dark-mode">Light Mode</button>
+    <div class="topbar">
+      <p>Celia Luque Díaz</p>
+      <div>
+        <button id="button-language-es">ES</button>
+        <button id="button-language-en">EN</button>
+        <button id="button-dark-mode">Light Mode</button>
+      </div>
     </div>
   </header>
 
 <!-- *** SPANISH *** -->
-  <div class="background-window" id="content-language-es">
+  <div id="content-language-es">
 
 <!-- introducción -->
     <section>
-      <div>
-        <h1>¡Hola!</h1>
-        <p>soy <strong>Celia Luque Díaz</strong> (aka Celudirosa en RRSS)... <strong>¡¡diseñadora y desarrolladora web!!</strong></p>
-        <img src="imgs/emoji-celia.png" alt="Emoji de Celia">
+      <div class="container container-intro">
+        <img src="imgs/emoji-celia.png" alt="Emoji de Celia" class="emoji">
+        <div class="text-intro">
+          <h1>¡Hola!</h1>
+          <p>soy <strong>Celia Luque Díaz</strong><br><span class="light-text">(aka Celudirosa en RRSS)</span>...<br><strong>¡¡diseñadora <br>y desarrolladora web!!</strong></p>
+        </div>
       </div>
     </section>
 
 <!-- about me -->
     <section>
-      <div>
+      <div class="container container-about">
         <p>Tengo un perfil híbrido que combina los mundos del <strong>diseño</strong> y la <strong>programación</strong>.</p>
         <p>Soy de <strong>Mérida</strong> (Extremadura) pero vivo en <strong>Valencia</strong> desde 2014.</p>
         <p>Mi curiosidad por <strong>el arte, el diseño y las nuevas tecnologías</strong> empezó desde muy pequeña, pero cuando comencé el bachillerato artístico en la <strong>ESAD</strong> (<b>E</b>scuela <b>S</b>uperior de <b>A</b>rte y <b>D</b>iseño) de Mérida fue cuando comencé a formarme y... ¡no he parado desde entonces!</p>
@@ -46,7 +51,7 @@
 
 <!-- formación -->
     <section>
-      <div>
+      <div class="container container-formacion">
         <h2>Formación</h2>
         <p>Conservación y Restauración de Bienes Culturales <b>UPV</b></p>
         <p>Artes Gráficas <b>UPV</b></p>
@@ -57,15 +62,20 @@
 
 <!-- lenguajes y sofwares -->
     <section>
-      <div>
-        <h2>Lenguajes de programación</h2>
-        <h2>Softwares y programas</h2>
+      <div class="container container-software">
+        <div>
+          <h2>Lenguajes de programación</h2>
+
+        </div>
+        <div>
+          <h2>Softwares y programas</h2>
+        </div>
       </div>
     </section>
 
 <!-- aptitudes -->
     <section>
-      <div>
+      <div class="container container-aptitudes">
         <ul><h2>Aptitudes</h2>
           <li>Colaborativa</li>
           <li>Organizada</li>
@@ -90,7 +100,6 @@
         <input type="submit" value="Enviar">
       </form>
     </section>
-    <p>¡Gracias!</p>
   </div>
 
 <!-- *** ENGLISH *** -->
@@ -103,6 +112,15 @@
 </body>
 
 <footer>
-  <div>RRSS</div>
+  <a href="https://www.instagram.com/celudirosa.dsgn/">
+    <img src="imgs/logo-instagram.png" alt="Instagram" class="img-link"/>
+  </a>
+  <a href="https://github.com/Celudirosa">
+    <img src="imgs/logo-github.png" alt="GitHub" class="img-link"/>
+  </a>
+  <a href="https://www.linkedin.com/in/celia-luque-d%C3%ADaz-837a99130/">
+    <img src="imgs/logo-linkedin.png" alt="LinkedIn" class="img-link"/>
+  </a>
 </footer>
+<p class="gracias">¡Gracias!</p>
 </html>

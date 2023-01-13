@@ -1,5 +1,4 @@
 html {
-  background: #273f4b;
   font-family: 'Poppins', sans-serif;
   font-size: 13px;
 }
@@ -8,15 +7,24 @@ body {
   margin: 0;
 }
 
-.background-window {
-  position: absolute;
-  margin: 100px, 30px, 200px, 30px;
+.background {
+  animation: changeBg 5s infinite alternate linear;
+}
 
-  background: rgba(233, 235, 248, 0.5);
-  border-width: 1px 1px 0px 0px;
-  border-style: solid;
-  border-color: #FFFFFF;
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
-  backdrop-filter: blur(10px);
-  border-radius: 15px;
+@keyframes changeBg {
+  0% {
+    background: #2A383F;
+  }
+  25% {
+    background: #12353F;
+  }
+  50% {
+    background: #212E34;
+  }
+  75% {
+    background: #2F2B38;
+  }
+  100% {
+    background: #2A3838;
+  }
 }
