@@ -1,12 +1,19 @@
+/* ---GENERAL STYLES--- */
+
 html {
   font-family: 'Poppins', sans-serif;
   font-size: 13px;
-  display: flex;
 }
 
 body {
   margin: 0;
 }
+
+li {
+  list-style-type: none;
+}
+
+/* ---BACKGROUND--- */
 
 .background {
   animation: changeBg 5s infinite alternate linear;
@@ -32,10 +39,10 @@ body {
 
 /* ---FONT STYLE--- */
 
-h1, h2 {
-  margin: 0;
-  padding: 0;
-}
+h2 {
+  text-align: center;
+  margin-top: 40px;
+} 
 
 .light-text {
   font-weight: 200;
@@ -44,112 +51,156 @@ h1, h2 {
 /* ---HEADER--- */
 
 .topbar {
-  background: rgba(233, 235, 248, 0.7);
-  border-width: 1px 1px 0px 0px;
-  border-style: solid;
-  border-color: #FFFFFF;
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
-  backdrop-filter: blur(10px);
-  border-radius: 15px;
-
   display: flex;
   justify-content: space-between;
-
-  position: fixed;
-  z-index: 1;
   align-items: center;
-
-  height: 30px;
-  width: 80%;
-  margin-top: 30px;
-  /* no consigo centrar bien el header ffff
-  porque no me hace caso el margin rigth?*/
-  padding-left: 15px;
-  padding-left: 15px;
+  flex-direction: row;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  padding: 0px 20px;
 }
 
 /* buttons */
 
-.button-es.button-en {
+/* ES | EN */
+
+.button-es, .button-en {
   border: none;
-  /* porque no me hace caso el border none? */
+  background: none;
 }
+
+.button-es:hover, .button-en:hover {
+  cursor: pointer;
+  color: #FFFFFF;
+}
+
+/* Light/Dark mode */
 
 .button-modes {
   border: none;
 }
 
+.button-modes:hover {
+  cursor: pointer;
+  box-shadow:
+  2px 2px 2px 2px #0002,
+  2px 2px 2px 2px #0001;
+  transition: all 0.3s ease;
+}
+
 /* ---CONTAINERS--- */
 
-/* Style containers */
+.mainpage {
+  display: flex;
+  flex-direction: column;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Generic style containers */
+
+.container-style {
+  background: rgba(233, 235, 248, 0.7);
+  border-width: 1px 1px 0px 0px;
+  border-style: solid;
+  border-color: #FFFFFF;
+  border-radius: 15px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(10px);
+}
 
 .container {
+  margin-top: 40px;
+  flex-direction: column;
+
   background: rgba(233, 235, 248, 0.7);
   border-width: 1px 1px 0px 0px;
   border-style: solid;
   border-color: #FFFFFF;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(10px);
-  border-radius: 15px;
-  margin-top: 40px;
-  flex-direction: row;
 }
+
+.container-form {
+  margin-bottom: 12px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+ /* ¿porque no me hace caso? */
+.container-form:nth-child(even) {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px; /* idem */
+  margin-left: auto;
+}
+
+/* @media all and (min-width:800px) {
+  .container--intro, .container-form:nth-child(even) {
+    border-radius: 20px;
+  } */
 
 /* container content */
 
-.container-intro {
+.container--intro {
   margin-right: 15px;
-  margin-top: 60px;
   display: flex;
   width: 400px;
   height: 234px;
-  /* no se cambiarle el margin top para que tenga mas espacio con el header */
+  flex-direction: row;
 }
 
-.container-about {
-  margin-left: 15px;
+.container--about {
   padding: 35px;
+  width: 400px;
+  height: 265px;
+  margin-left: auto;
 }
 
-.container-formacion {
-  margin-right: 15px;
-  padding: 35px;
-  display: flex;
+.container--formacion {
+  padding: 25px;
+  width: 400px;
+  height: 350px;
   flex-direction: column;
+  text-align: center;
 }
 
-.container-software {
+.container--software {
   padding: 35px;
+  width: 435px;
+  height: 330px;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.container--aptitudes {
+  text-align: center;
+  /* no soy capaz de poner los iconos en dos columnas :( */
 }
 
 /* ---INTRO--- */
 
 .emoji {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 0px 11px;
-  isolation: isolate;
-
   width: 231px;
   height: 220px;
-
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-  /* si pongo la imagen alineada al botton la lío... */
+  align-self: flex-end;
 }
 
 .text-intro {
   padding-top: 25px;
-  padding-right: 25px;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+  margin-left: -30px;
+}
+
+.formacion-text {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: left;
 }
 
 /* ---FORMACION--- */
@@ -169,10 +220,16 @@ h1, h2 {
   height: 40.33px;
 }
 
+.svg-formacion {
+  margin-right: 20px;
+}
+
 /* ---PROGRAM & SOFTWARS--- */
 
-.container-software .svgs-align {
+.svgs-align {
   display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
 }
 
 .svg-wp {
@@ -183,8 +240,41 @@ h1, h2 {
 /* ---APTITUDES--*/
 
 
+
 /* ---FORMULARIO--- */
 
+.input-formulario {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.input-name, .input-email {
+  width: 282px;
+  height: 25px;
+  padding: 6px 14px;
+  margin-left: 70px;
+  margin-right: 70px;
+}
+
+.input-mensaje {
+  width: 282px;
+  padding: 6px 14px;
+  margin-left: 70px;
+  margin-right: 70px;
+}
+
+.input-button {
+  width: 137px;
+  height: 37px;
+}
+
+.input-button:hover {
+  cursor: pointer;
+
+  background-color: rgba(233, 235, 248, 0.949);
+}
 
 /* ---FOOTER--- */
 
@@ -192,9 +282,15 @@ footer {
   width: 100%;
   display: flex;
   justify-content: center;
+  margin-top: 120px;
+}
+
+.footer-dark-mode {
+  margin: 15px;
 }
 
 .gracias {
   display: flex;
   justify-content: center;
+  margin-bottom: 80px;
 }

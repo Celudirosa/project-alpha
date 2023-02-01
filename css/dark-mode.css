@@ -1,3 +1,5 @@
+/* ---GENERAL STYLES--- */
+
 html {
   font-family: 'Poppins', sans-serif;
   font-size: 13px;
@@ -6,6 +8,8 @@ html {
 body {
   margin: 0;
 }
+
+/* ---BACKGROUND--- */
 
 .background {
   animation: changeBg 5s infinite alternate linear;
@@ -33,6 +37,6 @@ body {
   fill: white;
 }
 
-.gracias {
+.gracias, .h2--dark-mode {
   color: white;
 }
