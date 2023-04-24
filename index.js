@@ -17,26 +17,26 @@ buttonLanguageEn.addEventListener("click", function() {
 })
 
 // *** CHANGE MODES ***
-var buttonDarkMode = document.getElementById("button-dark-mode");
-var styleDarkMode = document.getElementById("style-dark-model");
+var buttonLightMode = document.getElementById("button-light-mode");
+var styleLightMode = document.getElementById("style-light-mode");
 
 // Turn on dark mode
-function activateDarkMode() {
-  styleDarkMode.disabled = false;
-  buttonDarkMode.innerHTML = "Light Mode";
+function activateLightMode() {
+  styleLightMode.disabled = false;
+  buttonLightMode.innerHTML = "Dark Mode";
 }
 
 // Turn off dark mode
-function deactivateDarkMode() {
-  styleDarkMode.disabled = true;
-  buttonDarkMode.innerHTML = "Dark Mode";
+function deactivateLightMode() {
+  styleLightMode.disabled = true;
+  buttonLightMode.innerHTML = "Light Mode";
 }
 
 // Switch between modes on click
-buttonDarkMode.addEventListener("click", function() {
-  if (styleDarkMode.disabled) {
-    activateDarkMode();
+buttonLightMode.addEventListener("click", function() {
+  if (styleLightMode.disabled) {
+    activateLightMode();
   } else {
-    deactivateDarkMode();
+    deactivateLightMode();
   }
 })

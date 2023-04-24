@@ -1,20 +1,3 @@
-/* ---GENERAL STYLES--- */
-
-html {
-  font-family: 'Poppins', sans-serif;
-  font-size: 13px;
-}
-
-body {
-  margin: 0;
-}
-
-li {
-  list-style-type: none;
-}
-
-/* ---BACKGROUND--- */
-
 .background {
   animation: changeBg 5s infinite alternate linear;
 }
@@ -37,13 +20,6 @@ li {
   }
 }
 
-/* ---FONT STYLE--- */
-
-h2 {
-  text-align: center;
-  margin-top: 40px;
-} 
-
 .light-text {
   font-weight: 200;
 }
@@ -60,6 +36,19 @@ h2 {
   margin-right: auto;
   margin-top: 50px;
   padding: 0px 20px;
+  height: 30px;
+
+  background: rgba(233, 235, 248, 0.7);
+  border-width: 1px 1px 0px 0px;
+  border-style: solid;
+  border-color: #FFFFFF;
+  border-radius: 15px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(10px);
+}
+
+.topbar p {
+  margin: 0;
 }
 
 /* buttons */
@@ -102,16 +91,6 @@ h2 {
 
 /* Generic style containers */
 
-.container-style {
-  background: rgba(233, 235, 248, 0.7);
-  border-width: 1px 1px 0px 0px;
-  border-style: solid;
-  border-color: #FFFFFF;
-  border-radius: 15px;
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
-  backdrop-filter: blur(10px);
-}
-
 .container {
   margin-top: 40px;
   flex-direction: column;
@@ -128,42 +107,37 @@ h2 {
   margin-bottom: 12px;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
+  max-width: 90%;
 }
 
- /* ¿porque no me hace caso? */
 .container-form:nth-child(even) {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 20px;
-  border-top-left-radius: 20px; /* idem */
+  border-top-left-radius: 20px;
   margin-left: auto;
 }
-
-/* @media all and (min-width:800px) {
-  .container--intro, .container-form:nth-child(even) {
-    border-radius: 20px;
-  } */
 
 /* container content */
 
 .container--intro {
   margin-right: 15px;
   display: flex;
-  width: 400px;
+  max-width: 400px;
   height: 234px;
   flex-direction: row;
 }
 
 .container--about {
   padding: 35px;
-  width: 400px;
+  max-width: 400px;
   height: 265px;
   margin-left: auto;
 }
 
 .container--formacion {
   padding: 25px;
-  width: 400px;
+  max-width: 400px;
   height: 350px;
   flex-direction: column;
   text-align: center;
@@ -171,7 +145,7 @@ h2 {
 
 .container--software {
   padding: 35px;
-  width: 435px;
+  max-width: 435px;
   height: 330px;
   display: flex;
   flex-direction: column;
@@ -179,8 +153,9 @@ h2 {
 }
 
 .container--aptitudes {
+  max-width: 435px;
   text-align: center;
-  /* no soy capaz de poner los iconos en dos columnas :( */
+  flex-direction: column;
 }
 
 /* ---INTRO--- */
@@ -239,13 +214,25 @@ h2 {
 
 /* ---APTITUDES--*/
 
+.iconos-column {
+  columns: 2;
+}
 
 
 /* ---FORMULARIO--- */
 
+.formulario-style {
+  background: rgba(233, 235, 248, 0.7);
+  border-width: 1px 1px 0px 0px;
+  border-style: solid;
+  border-color: #FFFFFF;
+  border-radius: 15px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(10px);
+}
+
 .input-formulario {
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
 }
@@ -272,7 +259,6 @@ h2 {
 
 .input-button:hover {
   cursor: pointer;
-
   background-color: rgba(233, 235, 248, 0.949);
 }
 
@@ -293,4 +279,35 @@ footer {
   display: flex;
   justify-content: center;
   margin-bottom: 80px;
+}
+
+
+@media all and (min-width:800px) {
+
+  .container-form, .container-form:nth-child(even) {
+    border-radius: 20px;
+    max-width: auto;
+  }
+
+  .container--intro {
+    width: 400px;
+  }
+
+  .container--about {
+    width: 400px;
+  }
+
+  .container--formacion {
+    width: 400px;
+  }
+
+  .container--software {
+    width: 435px;
+    border-radius: 20px;
+  }
+
+  .container--aptitudes {
+    width: 435px;
+    border-radius: 20px;
+  }
 }

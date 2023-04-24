@@ -1,16 +1,3 @@
-/* ---GENERAL STYLES--- */
-
-html {
-  font-family: 'Poppins', sans-serif;
-  font-size: 13px;
-}
-
-body {
-  margin: 0;
-}
-
-/* ---BACKGROUND--- */
-
 .background {
   animation: changeBg 5s infinite alternate linear;
 }
